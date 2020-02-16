@@ -34,7 +34,7 @@ int main(){
             data[i].end=i;
             data[i].start=i;
         }
-        if (max<data[i].sum){
+        if (max<data[i].sum){ 
             max =data[i].sum;
         }
 

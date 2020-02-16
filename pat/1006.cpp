@@ -4,6 +4,7 @@
 */
 
 #include<iostream>
+#include<string.h>
 using namespace std;
 
 bool compare(int a[],int b[])

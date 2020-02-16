@@ -82,5 +82,10 @@ int main() {
 		else
 			printf("\n");
     }
+    int a = 1;
+    while (true)
+    {
+        /* code */
+    }
     return 0;
 }
