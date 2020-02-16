@@ -2,19 +2,14 @@
 #include <vector>
 using namespace std;
 // @1 厄拉多塞筛选
-int countPrimes(int n)
-{
+int countPrimes(int n) {
     int count = 0;
     vector<bool> sins(n + 1);
 
-    for (int i = 2; i < n; ++i)
-    {
-
-        if (!sins[i])
-        {
+    for (int i = 2; i < n; ++i) {
+        if (!sins[i]) {
             count++;
-            for (int j = i * 2; j < n; j += i)
-            {
+            for (int j = i * 2; j < n; j += i) {
                 sins[j] = true;
             }
         }
@@ -58,7 +53,4 @@ int countPrimes(int n)
 
 //     return count;
 // }
-int main()
-{
-    printf("%d\n", countPrimes(10000));
-}
+int main() { printf("%d\n", countPrimes(10000)); }

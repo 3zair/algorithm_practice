@@ -10,7 +10,8 @@ using namespace std;
 这样就出现了两部分的东西：
 原本10个现在9个1份的，打包好的物品，这些，我们不用管
 零散的物品，它们还可以分成：
-从原来打包的里面拿出来的物品，它们的总和 =》 原来打包好的份数 =》 10进制进位的次数 =》 10进制下，除个位外其他位上的值的总和
+从原来打包的里面拿出来的物品，它们的总和 =》 原来打包好的份数 =》
+10进制进位的次数 =》 10进制下，除个位外其他位上的值的总和
 以10个为1份打包时，打不进去的零散物品 =》 10进制个位上的值
 如上零散物品的总数，就是第一次处理num后得到的累加值
 如果这个累加值>9，那么如题就还需要将各个位上的值再相加，直到结果为个位数为止。也就意味着还需要来一遍如上的过程。
@@ -31,15 +32,12 @@ using namespace std;
 // }
 
 // @2正常
-int addDigits(int num)
-{
-    while (num > 9)
-    {
+int addDigits(int num) {
+    while (num > 9) {
         int tmp = 0;
-        while (num != 0)
-        {
+        while (num != 0) {
             tmp += num % 10;
-            //printf("debug %d\n", tmp);
+            // printf("debug %d\n", tmp);
             num /= 10;
         }
         num = tmp;
@@ -48,7 +46,4 @@ int addDigits(int num)
     return num;
 }
 
-int main()
-{
-    printf("%d\n", addDigits(2268));
-}
+int main() { printf("%d\n", addDigits(2268)); }

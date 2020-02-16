@@ -5,23 +5,16 @@
 #include <vector>
 using namespace std;
 
-vector<int> plusOne(vector<int> &digits)
-{
-    if (digits.back() < 9)
-    {
+vector<int> plusOne(vector<int> &digits) {
+    if (digits.back() < 9) {
         digits[digits.size() - 1] += 1;
 
         return digits;
-    }
-    else
-    {
+    } else {
         digits.pop_back();
-        if (digits.size() == 0)
-        {
+        if (digits.size() == 0) {
             digits.push_back(1);
-        }
-        else
-        {
+        } else {
             digits = plusOne(digits);
         }
         digits.push_back(0);
@@ -30,15 +23,13 @@ vector<int> plusOne(vector<int> &digits)
     }
 }
 
-int main()
-{
+int main() {
     int a[6] = {1, 9, 9, 9, 9, 9};
     vector<int> aa(a, a + 6);
     aa = plusOne(aa);
 
     vector<int>::iterator ite = aa.begin();
-    for (; ite != aa.end(); ite++)
-    {
+    for (; ite != aa.end(); ite++) {
         printf("%d", *ite);
     }
     printf("\n");

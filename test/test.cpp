@@ -1,14 +1,10 @@
-#include <iostream>
 #include <string.h>
+#include <iostream>
 using namespace std;
 
-bool cmp(string a, string b)
-{
-    return strcmp(a.c_str(), b.c_str()) < 0;
-}
+bool cmp(string a, string b) { return strcmp(a.c_str(), b.c_str()) < 0; }
 
-int main()
-{
+int main() {
     // char s1[10],s2[10],s3[10];
     // char a;
     // scanf("%s%s%s",s1,s2,s3);
@@ -33,8 +29,7 @@ int main()
     //     y=-0.5*x+20;
     // }
     // cout<<y<<endl;
-    for (int i = 0; i < 10; ++i)
-    {
+    for (int i = 0; i < 10; ++i) {
         printf("%d\n", i);
     }
     return 0;

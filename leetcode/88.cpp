@@ -6,27 +6,21 @@
 
 using namespace std;
 
-void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
-{
+void merge(vector<int> &nums1, int m, vector<int> &nums2, int n) {
     vector<int> nums1Copy(nums1);
     nums1.clear();
 
     int i = 0, j = 0;
-    while (true)
-    {
-        if (i == m)
-        {
-            for (; j < n; ++j)
-            {
+    while (true) {
+        if (i == m) {
+            for (; j < n; ++j) {
                 nums1.push_back(nums2[j]);
             }
             break;
         }
 
-        if (j == n)
-        {
-            for (; i < m; ++i)
-            {
+        if (j == n) {
+            for (; i < m; ++i) {
                 nums1.push_back(nums1Copy[i]);
             }
             break;
@@ -40,8 +34,7 @@ void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
 
     // output
     vector<int>::iterator ite = nums1.begin();
-    for (; ite != nums1.end(); ite++)
-    {
+    for (; ite != nums1.end(); ite++) {
         printf("%d", *ite);
     }
     printf("\n");
@@ -49,8 +42,7 @@ void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
     return;
 }
 
-int main()
-{
+int main() {
     int a[6] = {1, 2, 3, 0, 0, 0};
     vector<int> aa(a, a + 6);
     int b[3] = {2, 5, 6};
