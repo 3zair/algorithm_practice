@@ -1,2 +1,4 @@
 #gitignore
 /pat/test
+.vscode/*
+.git/*
