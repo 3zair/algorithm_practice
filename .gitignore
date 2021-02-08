@@ -1,5 +1,7 @@
 #gitignore
 /pat/test
+/leetcode/test
+/graph/test
 .vscode/*
 .git/*
 .idea/*
